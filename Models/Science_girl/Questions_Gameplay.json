@@ -1,0 +1,37 @@
+[
+	{
+		"Question": "Plants use sunlight as _______ to make______.",
+		"A": "Energy,Food",
+		"B": "Heat,Food",
+		"C": "Energy,Rain",
+		"D": "Heat,Food",
+		"Gameplay": "Sunlight Collection",
+		"Answer": "A",
+	},
+	{	"Question": "Plants need water, which they absorb through their ______.",
+		"A": "Leaves",
+		"B": "Branches",
+		"C": "Stem",
+		"D": "Roots",
+		"Gameplay": "Water Absorption",
+		"Answer": "D",
+	},
+	{
+		"Question": "Plants also need_______from the air.",
+		"A": "Oxygen",
+		"B": "Carbon dioxide",
+		"C": "Carbon",
+		"D": "Nitrogen",
+		"Gameplay": "Carbon Dioxide Intake",
+		"Answer": "B",
+	},
+	{
+		"Question": "By using sunlight, water, and carbon dioxide, plants create ______ and release ________.",
+		"A": "Carbon dioxide,Glucose",
+		"B": "Glucose,Carbon dioxide",
+		"C": "Oxygen,Glucose",
+		"D": "Glucose,Oxygen",
+		"Gameplay": "Photosynthesis Process",
+		"Answer": "D",
+	}
+]

@@ -1,0 +1,26 @@
+[
+	{
+		"Topic": "Photosynthesis",
+		"Gameplay": "Sunlight Collection",
+		"Task": "                 Help Dr.Ama collect sunlight.",
+		"Intro": "First, we need to collect sunlight. Plants use sunlight as energy to make food.Let's open the valve to allow sunlight to the plant!"
+	},
+	{
+		"Topic": "Photosynthesis",
+		"Gameplay": "Water Absorption",
+		"Task": "Turn on the water to ensure the plant gets enough.",
+		"Intro": "Next, plants need water, which they absorb through their roots. Let's make sure our plant gets enough water to stay healthy and perform photosynthesis!"
+	},
+	{
+		"Topic": "Photosynthesis",
+		"Gameplay": "Carbon Dioxide Intake",
+		"Task": "Turn on the pipes to capture carbon dioxide.",
+		"Intro": "Plants also need carbon dioxide from the air. Let's allow carbon dioxide into the chamber and get ready for the next step!"
+	},
+	{
+		"Topic": "Photosynthesis",
+		"Gameplay": "Photosynthesis Process",
+		"Task": "Combine sunlight, water, and carbon dioxide to create glucose and oxygen.",
+		"Intro": "Now it's time to combine everything! By using sunlight, water, and carbon dioxide, plants create glucose and release oxygen. Let's help our plant friend perform photosynthesis!"
+	}
+]
