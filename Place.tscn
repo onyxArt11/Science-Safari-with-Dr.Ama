@@ -1,0 +1,60 @@
+[gd_scene load_steps=11 format=3 uid="uid://dmtf37jip7vor"]
+
+[ext_resource type="Texture2D" uid="uid://cg6i1nhnk18eh" path="res://4168419.jpg" id="1_6wfew"]
+[ext_resource type="Script" path="res://scene/Room.gd" id="1_ldrs4"]
+[ext_resource type="PackedScene" uid="uid://cakqt06ayvhd8" path="res://scene/Explore.tscn" id="2_bv42j"]
+[ext_resource type="MeshLibrary" uid="uid://krk8agl4h45e" path="res://blocks4.tres" id="4_lu6aa"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_vr6xh"]
+panorama = ExtResource("1_6wfew")
+
+[sub_resource type="Sky" id="Sky_jy63l"]
+sky_material = SubResource("PanoramaSkyMaterial_vr6xh")
+
+[sub_resource type="Environment" id="Environment_ev3wt"]
+background_mode = 2
+sky = SubResource("Sky_jy63l")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1shwh"]
+albedo_color = Color(0.913725, 0.768627, 0.694118, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_1e5o8"]
+size = Vector2(60, 60)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rcpmo"]
+albedo_color = Color(0.843137, 0.635294, 0.513726, 1)
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_ldrs4")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ev3wt")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.1036, 0)
+material_override = SubResource("StandardMaterial3D_1shwh")
+use_collision = true
+flip_faces = true
+size = Vector3(60, 10, 60)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.468855, 0.883275, 0, -0.883275, 0.468855, 0, 11.8081, 0)
+shadow_enabled = true
+
+[node name="Node3D" parent="." instance=ExtResource("2_bv42j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.68909, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0039801, 2.10876, 0)
+mesh = SubResource("PlaneMesh_1e5o8")
+surface_material_override/0 = SubResource("StandardMaterial3D_rcpmo")
+
+[node name="platforms" type="Node3D" parent="."]
+
+[node name="GridMap" type="GridMap" parent="platforms"]
+mesh_library = ExtResource("4_lu6aa")
+cell_size = Vector3(1, 1, 1)
+data = {
+"cells": PackedInt32Array(0, 65533, 1441792, 65536, 65534, 0, 131075, 65522, 0, 196610, 65523, 0, 262145, 65524, 0, 262145, 65521, 0, 262147, 65519, 0, 262144, 65517, 0, 262142, 65522, 0, 196608, 65519, 0, 196613, 65517, 0, 262147, 65515, 0, 262145, 65513, 0, 327681, 65507, 0, 327682, 65507, 0, 327683, 65507, 0, 327681, 65506, 0, 327682, 65506, 0, 327683, 65506, 0, 327681, 65510, 0, 393214, 65510, 0, 327709, 5, 1048576, 327708, 5, 1048576, 327708, 6, 1048576, 327709, 6, 1048576, 327709, 7, 1048576, 327709, 8, 1048576, 327708, 7, 1048576, 327708, 8, 1048576, 327705, 7, 1048576, 327705, 6, 1048576, 262167, 6, 1048576, 262167, 7, 1048576, 262168, 7, 1048576, 262163, 7, 1048576, 262163, 6, 1048576, 262164, 6, 1048576, 262165, 9, 1048576, 262165, 10, 1048576, 262165, 11, 1048576, 262164, 11, 1048576, 196625, 9, 1048576, 196625, 8, 1048576, 196626, 9, 1048576, 196626, 10, 1048576, 131088, 8, 1048576, 131088, 7, 1048576, 131087, 5, 1048576, 131086, 7, 1048576, 131086, 8, 1048576, 393186, 65529, 1048576, 393186, 65530, 1048576, 393187, 65530, 1048576, 393186, 65531, 1048576, 393186, 65533, 1048576, 393187, 65533, 1048576, 393187, 65534, 1048576, 393187, 65535, 1048576, 393187, 0, 1048576, 393190, 2, 1048576, 393190, 3, 1048576, 393190, 4, 1048576, 393190, 5, 1048576, 393191, 5, 1048576, 393191, 6, 1048576, 393189, 8, 1048576, 393189, 9, 1048576, 393189, 10, 1048576, 393190, 10, 1048576, 393189, 11, 1048576, 327656, 6, 1048576, 327656, 7, 1048576, 327657, 7, 1048576, 327657, 8, 1048576, 327657, 9, 1048576, 327657, 10, 1048576, 327658, 10, 1048576, 327659, 10, 1048576, 327660, 11, 1048576, 327660, 10, 1048576, 327660, 12, 1048576, 327660, 13, 1048576, 327660, 14, 1048576, 262125, 12, 1048576, 262126, 12, 1048576, 262127, 12, 1048576, 262127, 11, 1048576, 262127, 10, 1048576, 262128, 10, 1048576, 262128, 9, 1048576, 262128, 8, 1048576, 262128, 7, 1048576, 262128, 6, 1048576, 262127, 6, 1048576, 196590, 1, 1048576, 196590, 0, 1048576, 196589, 65535, 1048576, 196590, 65535, 1048576, 196590, 3, 1048576, 393188, 65530, 1048576, 393189, 65530, 1048576, 393189, 65531, 1048576, 393190, 65531, 1048576, 393191, 65531, 1048576, 393191, 65532, 1048576, 393192, 65532, 1048576, 393193, 65532, 1048576, 393193, 65531, 1048576, 393192, 65531, 1048576, 393192, 65530, 1048576, 393192, 65529, 1048576, 393193, 65529, 1048576, 393192, 65528, 1048576, 393192, 65527, 1048576, 393192, 65526, 1048576, 393192, 65525, 1048576, 393191, 65525, 1048576, 393191, 65524, 1048576, 393190, 65524, 1048576, 393192, 65524, 1048576, 393193, 65524, 1048576, 393193, 65525, 1048576, 393190, 65525, 1048576, 393194, 65525, 1048576, 393194, 65524, 1048576, 393194, 65523, 1048576, 393193, 65523, 1048576, 393192, 65523, 1048576, 393190, 65523, 1048576, 393191, 65523, 1048576)
+}
+metadata/_editor_floor_ = Vector3(0, 5, 0)

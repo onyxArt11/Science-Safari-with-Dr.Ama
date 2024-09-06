@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://iwjjnx0wh7ce"]
+
+[ext_resource type="Script" path="res://Extension/mesh_merger/mesh_merger.gd" id="1_gvi67"]
+
+[node name="tube" type="Node3D"]
+transform = Transform3D(0.0499459, 0.0044066, 0.998742, -0.087886, 0.996131, 5.63185e-09, -0.994878, -0.0877755, 0.0501397, 5.82169, 5.20108, -0.222907)
+
+[node name="MeshMerger" type="MeshInstance3D" parent="."]
+script = ExtResource("1_gvi67")
